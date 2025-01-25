@@ -1,14 +1,14 @@
-# [Project Name] 🎯
+# Far Yet Near
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Code Craft
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Minnu Lekha V G - LBSITW
+- Member 2: Devu L S - LBSITW
+
 
 ### Hosted Project Link
 [mention your project hosted project link here]
