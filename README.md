@@ -11,54 +11,50 @@
 
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+(http://172.31.99.212:3002)
 
 ### Project Description
-[2-3 lines about what your project does]
+Our mission is to provide friends with a place to connect, share, and create memories together. Whether you're continents away or just a few cities apart, we offer tools and activities to strengthen your bond.
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+long distance friends unable to meet and interact with each other 
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+As a solution here we can projecting our project were people becomes more interactive and have fun
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- Languages used:HTML,CSS,Javascript
+- Frameworks used:Express.js
+- Libraries used:Bootstrap
+- Tools used:Visual Studio Code
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+git init
+npm i express
 
 # Run
-[commands]
+node app.js
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot About](https://github.com/user-attachments/assets/fefd7593-4b4a-4b8c-bd9f-a55ad10ccb54)
+Feature of our Website
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot Game](https://github.com/user-attachments/assets/144a68a9-5fa4-4c17-b8ff-220dee678fc2)
+Number Guessing Game
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot Playlist](https://github.com/user-attachments/assets/6c7cd234-0148-4dbb-91c6-22e7f0e2ff04)
+Playlist 
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+"Our platform connects friends across distances by providing interactive tools and shared experiences. The workflow illustrates how users can engage, share content, and create lasting memories through our seamless and intuitive system."
 
 For Hardware:
 
@@ -91,9 +87,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Minnu Lekha V G: Backend coding,Ideas
+- Devu L S: Designing,Frontend coding
+
 
 ---
 Made with ❤️ at TinkerHub
