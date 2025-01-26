@@ -1,4 +1,9 @@
-body{
-    background: white url("image/bg.jpg");
-background-size:cover
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    border: 2px solid black;
+    background-color: lightblue;
 }
