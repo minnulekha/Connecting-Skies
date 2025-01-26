@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-const port = 3002;
+const PORT = 3002;
 
 let players = {};
 let scores = [0, 0];
@@ -17,12 +17,16 @@ let previousGuess = null;
 
 app.use(express.static('public'));
 
-app.get('/games', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/games.html'));
+// Define route mappings
+const pages = ['/', '/games', '/movies', '/playlist', '/advice', '/about', '/login'];
+pages.forEach((route) => {
+    app.get(route, (req, res) => {
+        res.sendFile(path.join(__dirname, `public${route === '/' ? '/index' : route}.html`));
+    });
 });
 
 io.on('connection', (socket) => {
-    console.log('A user connected:', socket.id);
+    console.log(`A user connected: ${socket.id}`);
 
     socket.on('joinGame', () => {
         if (players[socket.id]) {
@@ -54,7 +58,7 @@ io.on('connection', (socket) => {
             return;
         }
 
-        let currentPlayer = Object.keys(players)[turn % 2];
+        const currentPlayer = Object.keys(players)[turn % 2];
         if (socket.id !== currentPlayer) {
             socket.emit('message', "It's not your turn!");
             return;
@@ -64,11 +68,11 @@ io.on('connection', (socket) => {
             previousGuess = number;
             io.to(Object.keys(players).find(id => id !== socket.id)).emit('message', 'Your turn to guess the number.');
         } else {
-            let opponent = Object.keys(players).find(id => id !== socket.id);
+            const opponentId = Object.keys(players).find(id => id !== socket.id);
             if (number === previousGuess) {
                 scores[players[socket.id] - 1] += 2;
             } else {
-                scores[players[opponent] - 1] += 1;
+                scores[players[opponentId] - 1] += 1;
             }
 
             previousGuess = null;
@@ -76,8 +80,8 @@ io.on('connection', (socket) => {
             io.emit('updateScore', scores);
             io.emit('message', `Player ${turn % 2 + 1}'s turn to guess.`);
 
-            if (scores.includes(20)) {
-                let winner = scores[0] >= 20 ? 'Player 1' : 'Player 2';
+            if (scores.some(score => score >= 20)) {
+                const winner = scores[0] >= 20 ? 'Player 1' : 'Player 2';
                 io.emit('gameOver', winner);
                 resetGame();
             }
@@ -85,35 +89,25 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-        console.log('User disconnected:', socket.id);
+        console.log(`User disconnected: ${socket.id}`);
         if (players[socket.id]) {
             delete players[socket.id];
-            scores = [0, 0];
-            turn = 0;
-            waitingForPlayers = true;
-            previousGuess = null;
+            resetGame();
             io.emit('message', 'A player has disconnected. Waiting for a new player...');
         }
     });
 });
 
 function resetGame() {
+    players = {};
     scores = [0, 0];
     turn = 0;
-    players = {};
     waitingForPlayers = true;
     previousGuess = null;
 }
 
-app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public/index.html')); });
-app.get('/movies', (req, res) => { res.sendFile(path.join(__dirname, 'public/movies.html')); });
-app.get('/playlist', (req, res) => { res.sendFile(path.join(__dirname, 'public/songs.html')); });
-app.get('/advice', (req, res) => { res.sendFile(path.join(__dirname, 'public/advice.html')); });
-app.get('/about', (req, res) => { res.sendFile(path.join(__dirname, 'public/about.html')); });
-app.get('/login', (req, res) => { res.sendFile(path.join(__dirname, 'public/login.html')); });
-
-server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+server.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
 
 
