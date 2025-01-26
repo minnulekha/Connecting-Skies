@@ -11,7 +11,7 @@
 
 
 ### Hosted Project Link
-(http://172.31.99.212:3002)
+[(http://172.31.99.212:3002)](https://connecting-skies-8k2h.vercel.app/)
 
 ### Project Description
 Our mission is to provide friends with a place to connect, share, and create memories together. Whether you're continents away or just a few cities apart, we offer tools and activities to strengthen your bond.
