@@ -66,25 +66,19 @@ For Hardware:
 *Add caption explaining the schematic*
 
 # Build Photos
-![Team](Add photo of your team here)
+![Screenshot build](https://github.com/user-attachments/assets/bab50e9f-fda3-48a2-976d-cbc825ba85c0)
+**Backend Coding**
 
+![Screenshot Final ](https://github.com/user-attachments/assets/8b3a6353-8049-4f35-bfb1-2536e15b1c4e)
 
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+Encouraging meaningful connections
+Fostering positivity and support
+Providing a safe and inclusive environment
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
+<a href="https://drive.google.com/file/d/1yfRuf5qLi_krEyRIvKVNeoyHENlSXPso/view?usp=sharing">Demo Project</a>
+Welcome to connecting skies , a space designed to keep friendships alive no matter the distance! We understand how challenging it can be to stay connected when miles apart, and that's why we’ve created a platform to make it easier and more fun.
 
 ## Team Contributions
 - Minnu Lekha V G: Backend coding,Ideas
