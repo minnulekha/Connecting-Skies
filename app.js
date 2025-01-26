@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 let players = {};
 let scores = [0, 0];
@@ -15,10 +15,19 @@ let turn = 0;
 let waitingForPlayers = true;
 let previousGuess = null;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/games', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/games.html'));
+app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public/index.html')); });
+app.get('/games', (req, res) => { res.sendFile(path.join(__dirname, 'public/games.html')); });
+app.get('/movies', (req, res) => { res.sendFile(path.join(__dirname, 'public/movies.html')); });
+app.get('/playlist', (req, res) => { res.sendFile(path.join(__dirname, 'public/songs.html')); });
+app.get('/advice', (req, res) => { res.sendFile(path.join(__dirname, 'public/advice.html')); });
+app.get('/about', (req, res) => { res.sendFile(path.join(__dirname, 'public/about.html')); });
+app.get('/login', (req, res) => { res.sendFile(path.join(__dirname, 'public/login.html')); });
+
+// Catch-all route for undefined paths
+app.get('*', (req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'public/404.html'));
 });
 
 io.on('connection', (socket) => {
@@ -103,13 +112,6 @@ function resetGame() {
     waitingForPlayers = true;
     previousGuess = null;
 }
-
-app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public/index.html')); });
-app.get('/movies', (req, res) => { res.sendFile(path.join(__dirname, 'public/movies.html')); });
-app.get('/playlist', (req, res) => { res.sendFile(path.join(__dirname, 'public/songs.html')); });
-app.get('/advice', (req, res) => { res.sendFile(path.join(__dirname, 'public/advice.html')); });
-app.get('/about', (req, res) => { res.sendFile(path.join(__dirname, 'public/about.html')); });
-app.get('/login', (req, res) => { res.sendFile(path.join(__dirname, 'public/login.html')); });
 
 server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
