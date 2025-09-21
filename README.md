@@ -58,7 +58,7 @@ Our project, **"Far Yet Near,"** provides an interactive platform for long-dista
 
   - **Screenshots**
 
-      - **About Page:** (https://github.com/user-attachments/assets/fefd7593-4b4a-4b8c-bd9f-a55ad10ccb54)
+      - **About Page:** ![Screenshot About](https://github.com/user-attachments/assets/fefd7593-4b4a-4b8c-bd9f-a55ad10ccb54)
       - **Number Guessing Game:** 
       - **Playlist:** 
 
