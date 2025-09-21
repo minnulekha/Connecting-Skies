@@ -5,142 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advice</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berlin+Sans+FB&family=Segoe+Script&display=swap" rel="stylesheet">
     <style>
-    
-        body{
+        body {
             background: white url("image/bg4.jpeg");
-            background-size:cover;
+            background-size: cover;
             background-position: center;
             height: 100vh;
-            
-            }
-        h2{
-            font-family: Segoe Script;
+        }
+
+        /* Navbar styles */
+        .navbar-brand {
+            font-family: 'Berlin Sans FB', sans-serif;
+            font-size: 2.5rem;
+        }
+
+        .nav-link, .dropdown-toggle {
+            font-size: 1.2rem;
+        }
+
+        /* Main content styles */
+        .advice-section {
+            padding: 3rem 0;
+        }
+
+        h2, h3 {
+            font-family: 'Segoe Script', cursive;
             text-align: center;
         }
+
+        p {
+            font-size: 1.2rem; /* Adjusted to rem for better scaling */
+        }
         
-        p{
-            
-            font-size: 150%;
-        }
-        .adv{
-        margin: 3%;
-        }
-        table{padding: 10%;
-            height: 100%;
-            margin:2%;
+        .advice-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
         }
 
+        /* Media queries for responsiveness */
+        @media (max-width: 992px) {
+            .navbar-brand {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            .nav-link, .dropdown-toggle {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg text-centre" style="background-color: #bc5ff5;">
-        <nav class="navbar " style="background-color: #bc5ff5;">
-            <div class="container">
-              <a class="navbar-brand" href="/">
-                <img src="image/logo2.png" alt="Bootstrap" width="100" height="90">
-              </a>
-            </div>
-          </nav>
-        <div class="container-fluid" >
-          <a class="navbar-brand  fs-1" href="/" style="font-family: Berlin Sans FB;">Connecting Skies</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
-              </li>
-              
-                <li class="collapse navbar-collapse nav-item " >
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle fs-5" data-bs-toggle="dropdown" >
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg" style="background-color: #bc5ff5;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="image/logo2.png" alt="Logo" width="100" height="90">
+            </a>
+            <a class="navbar-brand" href="/">Connecting Skies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Entertainment
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-">
-                          <li><a class="dropdown-item" href="/movies">Movies & TV Shows</a></li>
-                          <li><a class="dropdown-item" href="/playlist">Playlist</a></li>
-                          <li><a class="dropdown-item" href="/games">Games</a></li>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/movies">Movies & TV Shows</a></li>
+                            <li><a class="dropdown-item" href="/playlist">Playlist</a></li>
+                            <li><a class="dropdown-item" href="/games">Games</a></li>
                         </ul>
-                      </li>
-                    </ul>
-                </li>
-                
-              
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="/advice">Advices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="/about">About</a>
-              </li>
-            </ul>
-          </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/advice">Advices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-
-      <div>
-        <table >
-         <tr>
-            <td>
-                <div class="adv">
-                <h2>Strengthen your long-distance friendship with these fun and meaningful tips!</h2><br>
-                </td>
-                
-                    <td>
-                        <img src="image/mi.jpg">
-                    </td>
-                    </tr>
-                    <tr>
-                <td>
-                <h3>Regular Communication:</h3>
-                        <p>- Schedule regular calls or video chats to stay updated. 
-                        <br>- Use messaging apps to share daily updates, memes, and random thoughts.</p>  
-
-                    <h3>Celebrate Special Moments: </h3>
-                        <p>- Remember birthdays, anniversaries, and milestones with virtual celebrations or surprise gifts.  
-                        <br>- Send handwritten letters or personalized care packages. </p> 
-
-                <h3>Plan Virtual Hangouts:</h3>  
-                <p>- Watch movies together online, play multiplayer games, or cook the same meal while video calling.  
-                - Try online activities like quizzes, escape rooms, or virtual tours.  </p>
-
-                <h3>Be Supportive and Understanding:</h3>  
-                    <p> - Distance can create misunderstandings, so be patient and understanding.  
-                    <br>- Offer emotional support even if you’re miles apart. </p> 
-
-                <h3>Create Shared Goals:</h3>  
-                    <p>- Set fitness challenges, book clubs, or travel plans to look forward to when you meet.  
-                    <br>- Work on a mutual hobby or project together online.  </p>
-
-                <h3>Surprise Each Other:</h3>
-                    <p>- Send unexpected voice notes, small gifts, or thoughtful messages to show you care.  
-                    <br>- Plan an unannounced visit if possible. </p> 
-
-                <h3>Embrace Change: </h3>
-                    <p>- Life changes, and so do people. Accept growth and new experiences while keeping the friendship alive.  </p>
-
-                <h3>Make the Most of Visits:</h3>  
-                    <p> - When you do meet, create unforgettable memories by planning exciting activities.  </p>
-
-                <h3>Stay Honest and Open:</h3>
-                    <p>- Keep communication honest and open to avoid drifting apart.  </p>
-
-                <h3>Trust Each Other:  </h3>
-                    <p> - Trust is key in any long-distance friendship—believe in your bond, even when apart.  </p>
-                    <br>
-
-                <h2>With effort and creativity, a long-distance friendship can be just as fulfilling as one in person!</h2>
+    </nav>
+    
+    <main class="container-fluid flex-grow-1 advice-section">
+        <h2 class="text-center mb-5">Strengthen your long-distance friendship with these fun and meaningful tips!</h2>
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 order-md-1">
+                <img src="image/mi.jpg" alt="Two friends talking on the phone" class="advice-image">
+            </div>
+            <div class="col-md-6 order-md-2">
+                <div class="p-3">
+                    <h3>Regular Communication:</h3>
+                    <p class="mb-4">- Schedule regular calls or video chats to stay updated.<br>- Use messaging apps to share daily updates, memes, and random thoughts.</p>
+                    
+                    <h3>Celebrate Special Moments:</h3>
+                    <p class="mb-4">- Remember birthdays, anniversaries, and milestones with virtual celebrations or surprise gifts.<br>- Send handwritten letters or personalized care packages.</p>
+                    
+                    <h3>Plan Virtual Hangouts:</h3>
+                    <p class="mb-4">- Watch movies together online, play multiplayer games, or cook the same meal while video calling.<br>- Try online activities like quizzes, escape rooms, or virtual tours.</p>
+                    
+                    <h3>Be Supportive and Understanding:</h3>
+                    <p class="mb-4">- Distance can create misunderstandings, so be patient and understanding.<br>- Offer emotional support even if you’re miles apart.</p>
                 </div>
-            </td>
-            <td>
-                <img src="image/lg.jpg" width="500">
-            </td>
-            
-        </tr>
-        </table>
-    </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            </div>
+        </div>
+        <div class="row g-4 align-items-center mt-5">
+            <div class="col-md-6 order-md-2">
+                <img src="image/lg.jpg" alt="Friends having a video call" class="advice-image">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="p-3">
+                    <h3>Create Shared Goals:</h3>
+                    <p class="mb-4">- Set fitness challenges, book clubs, or travel plans to look forward to when you meet.<br>- Work on a mutual hobby or project together online.</p>
+                    
+                    <h3>Surprise Each Other:</h3>
+                    <p class="mb-4">- Send unexpected voice notes, small gifts, or thoughtful messages to show you care.<br>- Plan an unannounced visit if possible.</p>
+                    
+                    <h3>Embrace Change:</h3>
+                    <p class="mb-4">- Life changes, and so do people. Accept growth and new experiences while keeping the friendship alive.</p>
+                    
+                    <h3>Make the Most of Visits:</h3>
+                    <p class="mb-4">- When you do meet, create unforgettable memories by planning exciting activities.</p>
+                    
+                    <h3>Stay Honest and Open:</h3>
+                    <p class="mb-4">- Keep communication honest and open to avoid drifting apart.</p>
+                    
+                    <h3>Trust Each Other:</h3>
+                    <p class="mb-4">- Trust is key in any long-distance friendship—believe in your bond, even when apart.</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center mt-5">With effort and creativity, a long-distance friendship can be just as fulfilling as one in person!</h2>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

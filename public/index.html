@@ -5,134 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connecting Skies</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berlin+Sans+FB&family=Tempus+Sans+ITC&family=Viner+Hand+ITC&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        body{
+        body {
             background: white url("image/bg4.jpeg");
-            background-size:cover;
+            background-size: cover;
             background-position: center;
-              height: 100vh;
-            }
+            height: 100vh;
+        }
+
+        /* Responsive Navbar Brand and Links */
+        .navbar-brand {
+            font-family: 'Berlin Sans FB', sans-serif;
+            font-size: 2.5rem; /* Larger font size for desktops */
+        }
+        
+        .nav-link, .dropdown-toggle {
+            font-size: 1.2rem; /* Larger font size for links */
+        }
+
         .ml {
             margin-left: 5%;
-            font-family: "Viner Hand ITC";
-
+            font-family: 'Viner Hand ITC', cursive;
         }
-        .pml{
-            margin-left: 7%;
-            font-family: Tempus Sans ITC;
 
+        .pml {
+            margin-left: 7%;
+            font-family: 'Tempus Sans ITC', sans-serif;
+        }
+
+        /* Media queries for smaller screens */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            .nav-link, .dropdown-toggle {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg text-centre" style="background-color: #bc5ff5;">
-        <nav class="navbar " style="background-color: #bc5ff5;">
-            <div class="container">
-              <a class="navbar-brand" href="/">
+    <nav class="navbar navbar-expand-lg" style="background-color: #bc5ff5;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
                 <img src="image/logo2.png" alt="Bootstrap" width="100" height="90">
-              </a>
-            </div>
-          </nav>
-        <div class="container-fluid" >
-          <a class="navbar-brand  fs-1" href="/" style="font-family: Berlin Sans FB;">Connecting Skies</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
-              </li>
-              
-                <li class="collapse navbar-collapse nav-item " >
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle fs-5" data-bs-toggle="dropdown" >
+            </a>
+            <a class="navbar-brand" href="/">Connecting Skies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Entertainment
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-">
-                          <li><a class="dropdown-item" href="/movies">Movies & TV Shows</a></li>
-                          <li><a class="dropdown-item" href="/playlist">Playlist</a></li>
-                          <li><a class="dropdown-item" href='/games'>Games</a></li>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/movies">Movies & TV Shows</a></li>
+                            <li><a class="dropdown-item" href="/playlist">Playlist</a></li>
+                            <li><a class="dropdown-item" href='/games'>Games</a></li>
                         </ul>
-                      </li>
-                    </ul>
-                </li>
-                
-              
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="/advice">Advices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="/about">About</a>
-              </li>
-            </ul>
-          </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/advice">Advices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-      <div id="carouselExampleIndicators" class="carousel slide">
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="image/phn.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="carousel image">
-          </div>
-          <div class="carousel-item">
-            <img src="image/img3.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="image/1.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="...">
-          </div>
+            <div class="carousel-item active">
+                <img src="image/phn.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="carousel image">
+            </div>
+            <div class="carousel-item">
+                <img src="image/img3.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/1.jpeg" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="...">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
-      <br>
-      <br>
-      <h1 style="text-align: center;font-family: Viner Hand ITC;">
+    </div>
+    <br>
+    <br>
+    <h1 style="text-align: center;font-family: 'Viner Hand ITC', cursive;">
         Connecting Skies
-      </h1>
-      <br>
-      <p style="text-align: center;font-size: 150%;font-family: Segoe Script;">Hey Fellows!, Here you can stay conected with you long distance buddies, especially if both friends are geographically separated. These websites can provide a central hub for shared experiences, activities, and communication. Here you can manage and enhance your long-distance friendship.</p>
-      <br>
-      <h3 class="ml">Shared Playlist or Music Section</h3>
-      <p class="pml">
+    </h1>
+    <br>
+    <p style="text-align: center;font-size: 150%;font-family: 'Segoe Script', cursive;">Hey Fellows!, Here you can stay connected with your long-distance buddies, especially if both friends are geographically separated. These websites can provide a central hub for shared experiences, activities, and communication. Here you can manage and enhance your long-distance friendship.</p>
+    <br>
+    <h3 class="ml">Shared Playlist or Music Section</h3>
+    <p class="pml">
         We offer features to create and share music playlists. You can both contribute your favorite songs or tracks that remind you of each other.
         Tips:
         Create themed playlists for different activities (e.g., "Road Trip Playlist" or "Relaxing Together").
         Share and listen to the playlist during video calls or while working on separate activities.
-        Discuss your music choices and share the stories behind why you chose certain songs</p>
-        <h3 classh3 class="ml">Activity challenges and Games</h3>
-        <p class="pml">
+        Discuss your music choices and share the stories behind why you chose certain songs
+    </p>
+    <h3 class="ml">Activity challenges and Games</h3>
+    <p class="pml">
         We offer challenges and interactive games to keep you entertained while staying connected.
         Tips:
         Participate in activities like virtual trivia, scavenger hunts, or cooking challenges that you both can do in real-time.
         Set up a challenge section where you compete or collaborate in tasks like completing a workout, reading a book, or even learning something new.
         Share achievements or accomplishments in a public leaderboard (if the website has one) to see how much fun you’re having.
-        </p>
-        <h3 class="ml">Themed Movies Night</h3>
-        <p class="pml">
-           we can offer you shows suggestion that you like ,movies  and TV show nights and plan the movies accordingly.
+    </p>
+    <h3 class="ml">Themed Movies Night</h3>
+    <p class="pml">
+        We can offer you shows suggestion that you like, movies, and TV show nights and plan the movies accordingly.
         Tips:
         You could pick a theme based on genres (e.g., “Romantic Comedies,” “Action Adventure,” “Sci-Fi Fridays”), or by actor or director (e.g., “Tom Hanks Marathon”).
         Plan a themed snack night where you both make or order food that matches the theme of the movie (e.g., popcorn for a movie marathon or sushi for a Japanese-themed night).
         If you’re doing a series of movies (like a trilogy), you could schedule multiple calls to watch them together
-        </p>
-       <br>
-       <hr>
-       <br>
+    </p>
+    <br>
+    <hr>
+    <br>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
