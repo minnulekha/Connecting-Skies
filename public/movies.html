@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies and TV Shows</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berlin+Sans+FB&family=Viner+Hand+ITC&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         body {
             background: white url("image/bg4.jpeg");
             background-size: cover;
             background-position: center;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         /* Navbar styles */
@@ -54,6 +59,36 @@
             margin-top: auto; /* Pushes the button to the bottom of the card body */
         }
 
+        /* Footer styles */
+        .footer {
+            background-color: #bc5ff5;
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #4a4a4a;
+        }
+
         /* Media queries for responsiveness */
         @media (max-width: 992px) {
             .navbar-brand {
@@ -73,7 +108,7 @@
         }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg" style="background-color: #bc5ff5;">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
@@ -108,204 +143,218 @@
             </div>
         </div>
     </nav>
-    <br>
-    <h1>Movies and TV</h1>
     
-    <div class="container my-5">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m1.jpg" class="card-img-top" alt="Friends">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Friends</h5>
-                        <p class="card-text">Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/70153404?source=35" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">1994 ‧ Sitcom ‧ 10 seasons</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m2.jpg" class="card-img-top" alt="Stranger Things">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Stranger Things</h5>
-                        <p class="card-text">In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/80057281?source=35" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">2016 ‧ Horror ‧ 4 seasons</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m3.jpg" class="card-img-top" alt="Harry Potter">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Harry Potter</h5>
-                        <p class="card-text">Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.primevideo.com/dp/amzn1.dv.gti.88ae477d-8574-3fc1-b27b-e2b723d68d7b?autoplay=0&ref_=atv_cf_strg_wb" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">Novel series</small>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main class="flex-grow-1">
+        <br>
+        <h1>Movies and TV</h1>
         
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m4.jpg" class="card-img-top" alt="The Office">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">The Office</h5>
-                        <p class="card-text">The show documents the exploits of a paper supply company in Scranton, Pennsylvania. With an office including the likes of various peers, this series takes a look at the lives of its co-workers.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/70281562?source=35" class="btn btn-outline-secondary">Watch Now</a>
+        <div class="container my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m1.jpg" class="card-img-top" alt="Friends">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Friends</h5>
+                            <p class="card-text">Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/70153404?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">1994 ‧ Sitcom ‧ 10 seasons</small>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">2005 ‧ Sitcom ‧ 9 seasons</small>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m2.jpg" class="card-img-top" alt="Stranger Things">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Stranger Things</h5>
+                            <p class="card-text">In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/80057281?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">2016 ‧ Horror ‧ 4 seasons</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m3.jpg" class="card-img-top" alt="Harry Potter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Harry Potter</h5>
+                            <p class="card-text">Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.primevideo.com/dp/amzn1.dv.gti.88ae477d-8574-3fc1-b27b-e2b723d68d7b?autoplay=0&ref_=atv_cf_strg_wb" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Novel series</small>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m5.jpg" class="card-img-top" alt="Spider-Man: Into the Spider-Verse">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Spider-Man: Into the Spider-Verse</h5>
-                        <p class="card-text">After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/81002747?source=35" class="btn btn-outline-secondary">Watch Now</a>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m4.jpg" class="card-img-top" alt="The Office">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">The Office</h5>
+                            <p class="card-text">The show documents the exploits of a paper supply company in Scranton, Pennsylvania. With an office including the likes of various peers, this series takes a look at the lives of its co-workers.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/70281562?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">2005 ‧ Sitcom ‧ 9 seasons</small>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">CBFC: U 2018 ‧ Family/Action ‧ 1h 56m</small>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m5.jpg" class="card-img-top" alt="Spider-Man: Into the Spider-Verse">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Spider-Man: Into the Spider-Verse</h5>
+                            <p class="card-text">After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/81002747?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">CBFC: U 2018 ‧ Family/Action ‧ 1h 56m</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m6.jpg" class="card-img-top" alt="Brooklyn Nine-Nine">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Brooklyn Nine-Nine</h5>
+                            <p class="card-text">Ray Holt, an eccentric commanding officer, and his diverse and quirky team of odd detectives solve crimes in Brooklyn, New York City.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/70281562?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">2013 ‧ Sitcom ‧ 8 seasons</small>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m6.jpg" class="card-img-top" alt="Brooklyn Nine-Nine">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Brooklyn Nine-Nine</h5>
-                        <p class="card-text">Ray Holt, an eccentric commanding officer, and his diverse and quirky team of odd detectives solve crimes in Brooklyn, New York City.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/70281562?source=35" class="btn btn-outline-secondary">Watch Now</a>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m7.jpg" class="card-img-top" alt="All of Us Are Dead">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">All of Us Are Dead</h5>
+                            <p class="card-text">Trapped students must escape their high school which has become ground zero for a zombie virus outbreak.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/81237994?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">2022 ‧ Drama ‧ 1 season</small>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">2013 ‧ Sitcom ‧ 8 seasons</small>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m8.jpg" class="card-img-top" alt="Avengers: Endgame">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Avengers: Endgame</h5>
+                            <p class="card-text">After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.hotstar.com/in/movies/avengers-endgame/1260013556?utm_source=gwa" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">CBFC: U/A 2019 ‧ Action/Sci-fi ‧ 3h 1m</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m9.jpg" class="card-img-top" alt="Hotel Transylvania">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hotel Transylvania</h5>
+                            <p class="card-text">Count Dracula runs a high-end resort for monsters and is overprotective of his daughter, Mavis. When a human named Johnny enters the hotel, Dracula tries to prevent Mavis from falling for him.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.sonyliv.com/movies/hotel-transylvania-1000042077?utm_source=Google&utm_medium=WatchNow&utm_campaign=1000042077" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">CBFC: U/A 2012 ‧ Family/Comedy ‧ 1h 31m</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m10.jpg" class="card-img-top" alt="Train to Busan">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Train to Busan</h5>
+                            <p class="card-text">Seok-woo and his daughter are on a train to Busan on the latter's birthday to see his wife. However, the journey turns into a nightmare when they are trapped amidst a zombie outbreak in South Korea.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.jiocinema.com/movies/train-to-busan/3994860/watch?utm_source=WatchAction&utm_medium=MovieWatchAction&utm_campaign=train-to-busan" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">CBFC: A 2016 ‧ Action/Horror ‧ 1h 58m</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m11.jpg" class="card-img-top" alt="Yeh Jawaani Hai Deewani">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Yeh Jawaani Hai Deewani</h5>
+                            <p class="card-text">Naina, a studious girl, yearns for some fun. A chance meeting with an old classmate, Aditi, leads to a trip that changes her life forever. She meets and falls for Bunny, but he has no time for love.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/70276515?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">CBFC: U/A 2013 ‧ Romance/Comedy ‧ 2h 40m</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/m12.jpg" class="card-img-top" alt="Kuch Kuch Hota Hai">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kuch Kuch Hota Hai</h5>
+                            <p class="card-text">A tomboyish Anjali loves Rahul, her best college pal, but is anguished when he decides to wed Tina, a fellow collegian. Eight years later, widower Rahul's daughter is told to reunite him with Anjali.</p>
+                            <div class="mt-auto">
+                                <a href="https://www.netflix.com/in/title/60036752?source=35" class="btn btn-outline-secondary">Watch Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">CBFC: U 1998 ‧ Family/Romance ‧ 2h 57m</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m7.jpg" class="card-img-top" alt="All of Us Are Dead">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">All of Us Are Dead</h5>
-                        <p class="card-text">Trapped students must escape their high school which has become ground zero for a zombie virus outbreak.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/81237994?source=35" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">2022 ‧ Drama ‧ 1 season</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m8.jpg" class="card-img-top" alt="Avengers: Endgame">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Avengers: Endgame</h5>
-                        <p class="card-text">After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.hotstar.com/in/movies/avengers-endgame/1260013556?utm_source=gwa" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">CBFC: U/A 2019 ‧ Action/Sci-fi ‧ 3h 1m</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m9.jpg" class="card-img-top" alt="Hotel Transylvania">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Hotel Transylvania</h5>
-                        <p class="card-text">Count Dracula runs a high-end resort for monsters and is overprotective of his daughter, Mavis. When a human named Johnny enters the hotel, Dracula tries to prevent Mavis from falling for him.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.sonyliv.com/movies/hotel-transylvania-1000042077?utm_source=Google&utm_medium=WatchNow&utm_campaign=1000042077" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">CBFC: U/A 2012 ‧ Family/Comedy ‧ 1h 31m</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m10.jpg" class="card-img-top" alt="Train to Busan">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Train to Busan</h5>
-                        <p class="card-text">Seok-woo and his daughter are on a train to Busan on the latter's birthday to see his wife. However, the journey turns into a nightmare when they are trapped amidst a zombie outbreak in South Korea.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.jiocinema.com/movies/train-to-busan/3994860/watch?utm_source=WatchAction&utm_medium=MovieWatchAction&utm_campaign=train-to-busan" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">CBFC: A 2016 ‧ Action/Horror ‧ 1h 58m</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m11.jpg" class="card-img-top" alt="Yeh Jawaani Hai Deewani">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Yeh Jawaani Hai Deewani</h5>
-                        <p class="card-text">Naina, a studious girl, yearns for some fun. A chance meeting with an old classmate, Aditi, leads to a trip that changes her life forever. She meets and falls for Bunny, but he has no time for love.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/70276515?source=35" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">CBFC: U/A 2013 ‧ Romance/Comedy ‧ 2h 40m</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/m12.jpg" class="card-img-top" alt="Kuch Kuch Hota Hai">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Kuch Kuch Hota Hai</h5>
-                        <p class="card-text">A tomboyish Anjali loves Rahul, her best college pal, but is anguished when he decides to wed Tina, a fellow collegian. Eight years later, widower Rahul's daughter is told to reunite him with Anjali.</p>
-                        <div class="mt-auto">
-                            <a href="https://www.netflix.com/in/title/60036752?source=35" class="btn btn-outline-secondary">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary">CBFC: U 1998 ‧ Family/Romance ‧ 2h 57m</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
     
-    <br>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- The new footer -->
+    <footer class="footer">
+        <p class="mb-1">&copy; 2025 ConnectingSkies. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </footer>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
